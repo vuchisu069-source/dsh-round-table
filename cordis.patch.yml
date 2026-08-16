@@ -1,0 +1,5 @@
+# round-table bundle patch：向 web 组合挂载 round-table（Node half 编排房间/成员/发言，
+# client half 经 __ModuleLoader__ 内核挂载时间线 UI）。
+- insert:
+    - id: round-table
+      name: round-table

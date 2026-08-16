@@ -1,0 +1,37 @@
+{
+  "name": "round-table",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "DSH 多方群聊协作插件（圆桌）：多 Agent 研讨房间，@指定/全体研讨/接力链，轮次控制与一键总结",
+  "main": "./index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "lib/client.js",
+    "lib/client",
+    "lib/src",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "build:client": "node scripts/build-client.mjs",
+    "check:client": "node scripts/build-client.mjs --check",
+    "test": "node --test 'tests/*.test.mjs'"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.12"
+  },
+  "license": "MIT"
+}
