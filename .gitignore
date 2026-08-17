@@ -1,2 +1,5 @@
 node_modules/
 *.log
+
+# 工作区记忆（本地私有，不入库）
+.workbuddy/
